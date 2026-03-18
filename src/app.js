@@ -19,8 +19,8 @@ module.exports = function() {
   app.use(getProfile);
 
   /* istanbul ignore next */
-  res.send({ message: "Hello from my CI/CD pipeline!" })
-    res.status(200).send('Hi there!');
+  app.get('/Hello from my CI/CD pipeline!', (req, res) => {
+  res.send({ message: "Hello from my CI/CD pipeline!" });
   });
 
   return app;
